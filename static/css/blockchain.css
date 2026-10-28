@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font change */
+}
+
+/* Body Styles */
+body {
+    line-height: 1.6;
+    background: #ffffff; /* White background */
+    color: #333333; /* Dark text for high contrast */
+    font-size: 16px;
+    background-image: url('https://img.freepik.com/premium-vector/grey-white-abstract-technology-background-hi-tech-digital-connect-high-technology-concept_262356-626.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header Styles */
+header {
+    background: #4caf50; /* Orange background for Cloud Computing */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Header Title */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Header Paragraph */
+header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* Course Section */
+.explore-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 10px;
+    margin-top: 40px; /* Gap between header and courses */
+    border: 2px solid #ddd; /* Light border to separate section */
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for section */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-left: 20%;
+}
+
+/* Course Card Styles */
+.course-card {
+    background: #ffffff; /* White background for cards */
+    border: 2px solid #ddd; /* Light border for cards */
+    border-radius: 10px; /* Smooth rounded corners */
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content vertically */
+    height: 380px; /* Fixed height for consistency across cards */
+}
+
+/* Course Card Hover Effect */
+.course-card:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    border-color: #4caf50; /* Change border color on hover */
+}
+
+/* Course Card Title */
+.course-card h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333333; /* Dark text for title */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Course Card Description */
+.course-card p {
+    font-size: 1.1rem;
+    color: #666666; /* Lighter gray for description text */
+    margin-bottom: 25px;
+    flex-grow: 1; /* Allow description to grow and fill space */
+}
+
+/* Course Button */
+.course-btn {
+    background: #4caf50; /* Orange background for button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Button shadow */
+    align-self: center; /* Horizontally center the button */
+    margin-top: auto; /* Push button to bottom of card */
+    width: 100%; /* Full width button */
+    text-transform: uppercase; /* Uppercase button text */
+}
+
+/* Course Button Hover Effect */
+.course-btn:hover {
+    background: #4caf50; /* Darker orange on hover */
+    transform: scale(1.05); /* Subtle scale effect on hover */
+}
+
+.course-btn:active {
+    transform: scale(0.98); /* Click effect */
+}
+
+/* Footer Styles */
+footer {
+    background: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    margin-top: 50px;
+    border-radius: 0 0 10px 10px;
+    font-weight: 300;
+}

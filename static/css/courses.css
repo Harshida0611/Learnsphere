@@ -1,0 +1,97 @@
+/* General course section style */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin-left: 10%;
+}
+
+/* Individual course block styles */
+.course {
+  background-color: #f4f4f9; /* Light background for course block */
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid #ff9800; /* Added border for the block */
+  border-top: 4px solid #003060; /* Extra emphasis on top border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure button is pushed to the bottom */
+  height: 100%; /* Allow course to stretch vertically */
+  
+}
+
+/* Hover effect for course blocks */
+.course:hover {
+  transform: translateY(-10px); /* Lift up the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  border-color: #003060; /* Darken border on hover */
+}
+
+/* Title Styling */
+.course h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Course description */
+.course p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Allow description to take up remaining space and push button down */
+}
+
+/* Button styling */
+.course-btn {
+  padding: 0.75rem 2rem;
+  background-color: #ff9800; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added smooth transition */
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  margin-top: auto; /* Push the button to the bottom of the .course block */
+  align-self: center; /* Ensures the button is centered horizontally */
+}
+
+/* Hover effect for button */
+.course-btn:hover {
+  background-color: #003060; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Active button state */
+.course-btn:active {
+  background-color: #001f40; /* Even darker blue when clicked */
+  transform: scale(0.98); /* Slight shrink effect when clicked */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .courses {
+    padding: 0 1rem;
+  }
+
+  .course {
+    padding: 1.5rem;
+  }
+
+  .course-btn {
+    width: 100%; /* Ensure the button stretches across the full width on small screens */
+    padding: 1rem 0; /* Increase padding for better touch interaction */
+    font-size: 1.2rem; /* Larger button text on smaller screens */
+    margin-top: 20px; /* Ensure consistent margin above the button */
+  }
+}

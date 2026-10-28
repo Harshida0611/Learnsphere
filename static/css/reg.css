@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form Container */
+  .regi-bg {
+    background-image: url('https://img.freepik.com/free-photo/top-view-desk-concept-with-gray-background_23-2148236825.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+  }
+  
+  .align-form {
+    width: 100%;
+    max-width: 600px;
+    background: rgb(130, 130, 155);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px 20px;
+    height: 86%;
+  }
+  
+  #progressbar {  
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 30px;
+    counter-reset: step;
+  }
+  
+  #progressbar li {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+  }
+  
+  #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    background: #cccccc;
+    color: white;
+    border-radius: 50%;
+    line-height: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  #progressbar li.active:before {
+    background: #1d3557;
+  }
+  
+  #progressbar li.active {
+    color: #1d3557;
+  }
+  
+  fieldset {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+  
+  fieldset.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Hide user input text while keeping the placeholder visible */
+  input:focus,
+  input:valid,
+  textarea:focus,
+  textarea:valid {
+    color: transparent; /* Hide the text inside input/textarea */
+    text-shadow: 0 0 0 #000; /* Keep placeholder visible */
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #999; /* Placeholder color */
+  }
+  
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    color: #457b9d; /* Change placeholder color on focus */
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    background: #457b9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background: #1d3557;
+  }
+  
+  /* Footer */
+  .footer-regi {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 12px;
+  }
+  

@@ -1,0 +1,278 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Video */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure video fills the entire screen */
+  z-index: -1; /* Ensure video stays behind other elements */
+}
+
+/* Navbar Styles */
+nav {
+  background: rgb(7, 7, 46); /* Slightly transparent background for contrast */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Make navbar stay on top */
+}
+
+nav .logo-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav .logo-wrapper img {
+  height: 50px; /* Adjust as needed */
+  margin-right: 0.5rem;
+}
+
+nav .logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #f2a365;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+}
+
+nav form input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 5px;
+}
+
+nav form button {
+  padding: 0.5rem 1rem;
+  background-color: #004080;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav form button:hover {
+  background-color: #003060;
+}
+
+/* Login Box Styles */
+.login-box {
+  position: fixed;
+  width: 450px;
+  height: 600px; /* Increased height to accommodate user type selection */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Soft white shadow */
+  border: 1px solid #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure the form is above other content */
+  color: #000; /* Change text color to black for contrast */
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Input Box Styles */
+.input-box {
+  position: relative;
+  width: 310px;
+  margin: 15px 0;
+  border-bottom: 2px solid #000;
+  align-items: center;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #000;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 20px;
+  color: black;
+  line-height: 57px;
+}
+
+/* User Type Selection */
+.user-type-selection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-type-selection label {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.user-type-selection input {
+  margin-right: 8px;
+}
+
+/* Remember and Forgot Section */
+.remember-forgot {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot a {
+  color: #000;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  width: 100%;
+  height: 40px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+/* Footer Styles */
+.link {
+  margin-top: 20px;
+  color: #000;
+  text-align: center;
+}
+
+.link p a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.link p a:hover {
+  text-decoration: underline;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.feature-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
+}
+
+/* Responsive Styles */
+@media (max-width: 375px) {
+  .login-box {
+    width: 300px;
+    height: 450px;
+  }
+
+  .input-box {
+    width: 275px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 576px) {
+  .login-box {
+    width: 350px;
+    height: 450px;
+  }
+
+  .input-box {
+    width: 275px;
+  }
+}
